@@ -1,0 +1,11 @@
+discord.py>=2.3.2
+openai>=1.11.1
+python-dotenv>=1.0.1
+aiofiles>=23.2.1
+transformers>=4.0.0
+torch>=2.0.0
+scikit-learn>=1.0.0
+tzdata
+datetime
+tzlocal
+sentence-transformers>=2.2.0
