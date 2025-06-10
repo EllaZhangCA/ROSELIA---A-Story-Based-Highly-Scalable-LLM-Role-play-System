@@ -10,6 +10,16 @@ import tzlocal
 
 import rag_handler
 from moka_memory import MochaMemory
+import logging, pathlib, json
+
+LOG_PATH = pathlib.Path("logs/roleplay_log.jsonl")
+LOG_PATH.parent.mkdir(exist_ok=True)
+
+_log_handler = logging.FileHandler(LOG_PATH, encoding="utf-8")
+_log_handler.setFormatter(logging.Formatter('%(message)s'))
+logger = logging.getLogger("roleplay")
+logger.setLevel(logging.INFO)
+logger.addHandler(_log_handler)
 
 load_dotenv()
 BOT_LANG = os.getenv("BOT_LANG", "CN")
@@ -113,6 +123,30 @@ def generate_reply(author_name: str, user_msg: str, iso_dt: str) -> str | None:
 
         deny = {"(NO REPLY)", "NO REPLY", "（NO REPLY）",
                 f"({CHARACTER_NAME}NO REPLY)", f"（{CHARACTER_NAME}NO REPLY）."}
+
+        usage = resp.usage
+        tokens_prompt     = usage.prompt_tokens
+        tokens_completion = usage.completion_tokens
+        tokens_total      = usage.total_tokens
+
+        mocha_memory.add_mocha_reply(reply)
+
+        log_obj = {
+            "time": iso_dt,
+            "user": author_name,
+            "user_msg": user_msg,
+            "rag_event": info["event_name"] if rels else None,
+            "rag_chapter": info["chapter_title"] if rels else None,
+            "rag_score": info["score"] if rels else None,
+            "rag_summary":info["Summary"] if rels else None,
+            "tokens_prompt": tokens_prompt,
+            "tokens_completion": tokens_completion,
+            "tokens_total": tokens_total,
+            "reply": reply
+        }
+        logger.info(json.dumps(log_obj, ensure_ascii=False))
+
+        deny = {...}
         return None if reply in deny else reply
 
     except Exception:
