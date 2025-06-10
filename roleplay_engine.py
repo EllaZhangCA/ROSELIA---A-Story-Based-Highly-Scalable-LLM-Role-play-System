@@ -16,7 +16,7 @@ BOT_LANG = os.getenv("BOT_LANG", "CN")
 CHARACTER_NAME      = os.getenv("CHARACTER_NAME", "Moka")
 CHARACTER_FULL_NAME = os.getenv("CHARACTER_FULL_NAME", "Moca Aoba")
 MODEL_NAME          = os.getenv("OPENAI_MODEL", "deepseek-chat")
-LLM_TEMPERATURE     = os.getenv("LLM_TEMPERATURE",1)
+LLM_TEMPERATURE     = float(os.getenv("LLM_TEMPERATURE",1))
 AIclient            = OpenAI(api_key=os.getenv("DEEPSEEK_KEY"),
                              base_url=os.getenv("DEEPSEEK_API_URL"))
 
@@ -53,7 +53,7 @@ else:
     RAG_PREFIX       = "根据用户的话，这里有一段相关剧情"
 
 PERSONALITY_TMPL = f"""
-{{SYSTEM_PROMPT_TPL}}
+{SYSTEM_PROMPT_TPL}
 {{knowledge_base}}
 {{relevant_story_prompt}}
 """
