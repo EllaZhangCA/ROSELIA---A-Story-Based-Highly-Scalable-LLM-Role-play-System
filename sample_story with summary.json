@@ -1,0 +1,9 @@
+{
+  "eventName": "Sample Event Name",
+  "chapterTitle": "Sample Chapter Title",
+  "extractedData": [
+    "A: U should REMOVE this file before deploy",
+    "B: REMOVE!"
+  ],
+  "Summary": "Sample Summary"
+}
