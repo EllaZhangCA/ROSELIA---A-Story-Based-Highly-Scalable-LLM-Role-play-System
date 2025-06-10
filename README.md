@@ -8,7 +8,7 @@ cd (你的文件路径，例如C:\Users\ellaz\roselia)
 python -m pip install -r requirements.txt
 ```
 ### 2.配置Embedding模型
-若用Hugging Face Hub，可直接在MODEL_PATH填模型名，无需下载；
+若用Hugging Face Hub，可直接在 .env 的 MODEL_PATH 中填模型名，无需下载；
 若放本地目录，要在 .env 中用“MODEL_PATH=”指向它。
 
 ### 3.配置.env
