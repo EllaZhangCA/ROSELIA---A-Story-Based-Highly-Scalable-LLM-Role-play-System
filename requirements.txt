@@ -3,7 +3,7 @@ openai>=1.11.1,<1.13
 python-dotenv>=1.0.1,<2.0
 tzdata
 tzlocal>=5.0,<6.0
-torch>=2.1.0,<2.2
+torch>=2.1.0,<3.0
 transformers>=4.39.0,<4.40
 sentence-transformers>=2.2.2,<2.3
 scikit-learn>=1.0.0,<1.4
