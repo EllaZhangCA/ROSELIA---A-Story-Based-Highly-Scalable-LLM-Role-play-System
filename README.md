@@ -10,6 +10,7 @@ python -m pip install -r requirements.txt
 ### 2.配置Embedding模型
 若用Hugging Face Hub，可直接在 .env 的 MODEL_PATH 中填模型名，无需下载；
 若放本地目录，要在 .env 中用“MODEL_PATH=”指向它。
+如果不知道用什么模型好，可以先用 MODEL_PATH=richinfoai/ritrieve_zh_v1 或者 MODEL_PATH=Qwen/Qwen3-Embedding-8B 试试
 
 ### 3.配置.env
 ```
