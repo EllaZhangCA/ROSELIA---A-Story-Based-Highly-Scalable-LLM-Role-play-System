@@ -1,6 +1,5 @@
 # ROSELIA - A Story Based Highly Scalable LLM Role play System
-ROSELIA is an abbreviation for Role-Oriented Story Embedding &amp; LLM Interaction Architecture
-Roselia是一个基于剧情检索、可水平扩展的角色扮演框架
+### ROSELIA 是 Role-Oriented Story Embedding &amp; LLM Interaction Architecture 的简写，这是一个基于剧情检索、可水平扩展的角色扮演框架
 ## 快速开始
 
 ### 1.安装依赖
