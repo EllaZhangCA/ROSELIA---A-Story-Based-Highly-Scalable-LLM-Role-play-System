@@ -26,8 +26,8 @@ META_CACHE_PATH=story_meta_cache.pkl # Path for storing meta info cache
 LANG=CN # Supported options: CN, EN, JP — only affects prompt language
 LLM_TEMPERATURE=1.125 # LLM temperature; higher values means more randomness
 
-DISCORD_TOKEN= (Only for discord bot) The token of your discord bot
-ALLOWED_CHANNEL_IDS_DC= (Only for discord bot) The channel ids that the bot allowed to chat
+DISCORD_TOKEN= #(Only for discord bot) The token of your discord bot
+ALLOWED_CHANNEL_IDS_DC= #(Only for discord bot) The channel ids that the bot allowed to chat e.g. 123,124,134
 ```
 
 ### 4.Import Story Files
