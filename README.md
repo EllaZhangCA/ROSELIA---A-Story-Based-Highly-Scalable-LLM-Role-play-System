@@ -29,8 +29,8 @@ META_CACHE_PATH=story_meta_cache.pkl #Meta路径缓存储存位置
 LANG=CN #支持 CN,EN 和 JP. 只改变prompt的语言
 LLM_TEMPERATURE=1.125 #LLM的temperature，越大越离散
 
-DISCORD_TOKEN= (Discord Bot 需要）Discord bot的token
-ALLOWED_CHANNEL_IDS_DC= (Discord Bot 需要）允许Discord bot发言的频道
+DISCORD_TOKEN= #(Discord Bot 需要）Discord bot的token
+ALLOWED_CHANNEL_IDS_DC= #(Discord Bot 需要）允许Discord bot发言的频道 样例：123,124,134
 ```
 
 ### 4.导入故事文件
