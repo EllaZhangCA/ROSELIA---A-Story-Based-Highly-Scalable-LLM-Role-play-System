@@ -84,6 +84,13 @@ message = generate_reply("Ella", "摩卡你今天练琴了吗？", "2025-06-16T1
 print(message)
 ```
 
+## discord_bot.py 使用指南
+discord_bot.py是一款调用roleplay_engine.py进行角色扮演的bot，它会读取频道中每一条消息，并让LLM判断是否需要回复、如何回复。
+您可以使用以下指令启动discord_bot.py
+```bash
+python discord_bot.py
+```
+
 ## 许可
 本项目代码遵循 Apache-2.0 许可，详情见 LICENSE。
 
