@@ -83,6 +83,14 @@ from roleplay_engine import generate_reply
 message = generate_reply("Ella", "Moka, did you practice guitar today?", "2025-06-16T11:45:14-07:00")
 print(message)
 ```
+## discord_bot.py Tutorial
+
+discord_bot.py is a bot that uses roleplay_engine.py for role-playing. It reads every message in the channel and lets LLM determine whether to reply and how to reply.
+You can start discord_bot.py using the following command
+
+```python
+python discord_bot.py
+```
 
 ## License
 This project is licensed under the Apache-2.0 License. For more details, please see the LICENSE file.
