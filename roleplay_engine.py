@@ -129,8 +129,6 @@ def generate_reply(author_name: str, user_msg: str, iso_dt: str) -> str | None:
         tokens_completion = usage.completion_tokens
         tokens_total      = usage.total_tokens
 
-        mocha_memory.add_mocha_reply(reply)
-
         log_obj = {
             "time": iso_dt,
             "user": author_name,
