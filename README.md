@@ -5,7 +5,12 @@
 
 ## 快速开始
 
-### 1.安装依赖
+### 1.安装
+下载本仓库的代码
+```bash
+git clone https://github.com/EllaZhangCA/ROSELIA---A-Story-Based-Highly-Scalable-LLM-Role-play-System.git
+```
+安装依赖
 ```bash
 cd (你的文件路径，例如C:\Users\ellaz\roselia)
 python -m pip install -r requirements.txt
