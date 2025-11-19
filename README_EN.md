@@ -7,6 +7,13 @@
 cd (your file path，e.g., C:\Users\ellaz\roselia)
 python -m pip install -r requirements.txt
 ```
+Alternatively, you can use Anaconda to create a virtual environment and install within it:
+```bash
+conda create -n roselia python=3.10
+conda activate roselia
+cd (your file path, e.g., C:\Users\ellaz\roselia)
+python -m pip install -r requirements.txt
+```
 ### 2.Configure the Embedding Model
 If using Hugging Face Hub, simply fill in the model name under MODEL_PATH in your .env file—no need to download anything.
 If the model is stored locally, point MODEL_PATH= in your .env to the local directory.
