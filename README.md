@@ -15,6 +15,13 @@ git clone https://github.com/EllaZhangCA/ROSELIA---A-Story-Based-Highly-Scalable
 cd (你的文件路径，例如C:\Users\ellaz\roselia)
 python -m pip install -r requirements.txt
 ```
+也可以选择用anaconda装虚拟环境，在虚拟环境里安装
+```bash
+conda create -n roselia python=3.10
+conda activate roselia
+cd (你的文件路径，例如C:\Users\ellaz\roselia)
+python -m pip install -r requirements.txt
+```
 ### 2.配置Embedding模型
 若用Hugging Face Hub，可直接在 .env 的 MODEL_PATH 中填模型名，无需下载；
 若放本地目录，要在 .env 中用“MODEL_PATH=”指向它。
